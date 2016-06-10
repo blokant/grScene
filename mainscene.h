@@ -10,6 +10,7 @@ class MainScene : public QGraphicsScene
 public:
     MainScene();
     MainScene(QObject* parent);
+    void populateScene();
 };
 
 #endif // MAINSCENE_H
