@@ -1,6 +1,6 @@
 #include "mainscene.h"
 //#include <QGraphicsScene>
-
+#include <QDebug>
 MainScene::MainScene()
 {
 
@@ -18,4 +18,11 @@ void MainScene::populateScene()
         addEllipse(i, 70, 50,50);
     }
 
+}
+
+void MainScene::mouseReleaseEvent(QGraphicsSceneMouseEvent *event)
+{
+    qDebug() << Q_FUNC_INFO;
+    QPointF point = event->scenePos();
+    addEllipse(point.x(), point.y(),7,7);
 }
